@@ -1,0 +1,20 @@
+{
+  "name": "cos_assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Daniele Salatti",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace backend dev\" \"yarn workspace frontend dev\"",
+    "build": "yarn workspaces run build",
+    "start": "yarn workspace backend start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
